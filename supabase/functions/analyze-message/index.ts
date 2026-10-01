@@ -111,6 +111,7 @@ ${policyContext}
 
 Analyze the customer's issue and respond with ONLY a valid JSON object (no markdown, no code fences) with this exact structure:
 {
+  "issue": "Brief description of the customer's problem",
   "intent": "Brief classification of what the customer wants",
   "orderNumber": "The order number mentioned by the customer, or null if none was provided",
   "recommendedAction": "Specific action the support agent should take",
@@ -127,6 +128,8 @@ Rules:
 - If no order number is provided, return null for orderNumber.
 - Do not invent or guess an order number.
 - If the customer's intent is unclear or multiple resolutions are possible, set confidence below 70 and requiresHumanReview to true.
+- Issue should describe the customer's problem, such as "Delayed shipment", "Damaged product", or "Wrong size received".
+- Intent should describe the customer's desired resolution or action, such as "Request refund", "Request exchange", or "Request logistics escalation".
 - The suggestedResponse should be empathetic, professional, and reference the relevant policy.
 - Return ONLY the JSON object, no other text.`;
 
