@@ -7,33 +7,39 @@ export interface Order {
 
 export const orders: Order[] = [
   {
-    orderNumber: 'ORD-28491',
+    orderNumber: '100',
     orderValue: 200,
     orderDate: 'Sep 27, 2026',
     status: 'Delivered',
   },
   {
-    orderNumber: 'ORD-12356',
+    orderNumber: '101',
     orderValue: 149,
     orderDate: 'Sep 29, 2026',
     status: 'Shipped',
   },
   {
-    orderNumber: 'ORD-45678',
+    orderNumber: '102',
     orderValue: 89,
     orderDate: 'Sep 25, 2026',
     status: 'Delayed',
   },
   {
-    orderNumber: 'ORD-78901',
+    orderNumber: '103',
     orderValue: 320,
     orderDate: 'Sep 22, 2026',
     status: 'Delivered',
   },
   {
-    orderNumber: 'ORD-11223',
+    orderNumber: '104',
     orderValue: 59,
     orderDate: 'Sep 28, 2026',
     status: 'Cancelled',
+  },
+  {
+    orderNumber: '105',
+    orderValue: 175,
+    orderDate: 'Sep 30, 2026',
+    status: 'Processing',
   },
 ];
