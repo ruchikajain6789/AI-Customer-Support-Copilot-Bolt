@@ -9,6 +9,7 @@ export interface PolicyDocument {
 }
 
 export interface AIAnalysisResult {
+  issue: string;
   intent: string;
   orderNumber: string | null;
   recommendedAction: string;
