@@ -75,7 +75,7 @@ function App() {
         orderStatus: '—',
         customerMessage: message,
         aiAnalysis: {
-          issue: result.intent,
+          issue: result.issue,
           intent: result.intent,
           confidence: result.confidence,
           recommendedAction: result.recommendedAction,
