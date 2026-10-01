@@ -49,7 +49,13 @@ function App() {
       if (!result.intent || !result.recommendedAction) {
         throw new Error('Invalid AI response');
       }
-
+      const orderMatch = message.match(/\bORD-\d+\b/i);
+const demoOrder = orderMatch
+  ? seedConversations.find(
+      (conversation) =>
+        conversation.orderNumber.toLowerCase() === orderMatch[0].toLowerCase()
+    )
+  : undefined;
       const relevantPolicies = findRelevantPolicies(message);
       const sources = (result.sources && result.sources.length > 0
         ? result.sources
