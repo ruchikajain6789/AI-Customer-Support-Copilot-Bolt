@@ -186,6 +186,7 @@ Rules:
     const parsed = JSON.parse(cleaned);
 
     const result = {
+      issue: String(parsed.issue || "Unknown"),
   intent: String(parsed.intent || "Unknown"),
   orderNumber: parsed.orderNumber ? String(parsed.orderNumber) : null,
   recommendedAction: String(parsed.recommendedAction || "Review required"),
