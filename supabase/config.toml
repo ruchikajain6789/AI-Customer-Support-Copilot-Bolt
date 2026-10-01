@@ -1,0 +1,2 @@
+[functions.analyze-message]
+verify_jwt = false
