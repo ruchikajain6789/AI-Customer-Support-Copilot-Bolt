@@ -7,6 +7,7 @@ import AIInsights from '@/components/AIInsights';
 import KnowledgeSources from '@/components/KnowledgeSources';
 import Settings from '@/components/Settings';
 import { conversations as seedConversations, findRelevantPolicies } from '@/data';
+import { orders } from '@/orders';
 import type { Conversation, View, AIAnalysisResult } from '@/types';
 
 function App() {
@@ -49,11 +50,11 @@ function App() {
       if (!result.intent || !result.recommendedAction) {
         throw new Error('Invalid AI response');
       }
-      const orderMatch = message.match(/\bORD-\d+\b/i);
+     const orderMatch = message.match(/\b\d{3}\b/);
+
 const demoOrder = orderMatch
-  ? seedConversations.find(
-      (conversation) =>
-        conversation.orderNumber.toLowerCase() === orderMatch[0].toLowerCase()
+  ? orders.find(
+      (order) => order.orderNumber === orderMatch[0]
     )
   : undefined;
       const relevantPolicies = findRelevantPolicies(message);
