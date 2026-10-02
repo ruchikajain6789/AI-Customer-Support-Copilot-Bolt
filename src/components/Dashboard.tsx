@@ -23,7 +23,10 @@ export default function Dashboard({ conversations, onOpenConversation, onNavigat
   const kpis = [
   {
     label: 'Conversations Today',
-    value: conversations.length.toString(),
+    value: conversations
+  .filter(c => new Date(c.createdAt).toDateString() === new Date().toDateString())
+  .length
+  .toString(),
     icon: MessageSquare,
     accent: 'text-blue-600',
     bg: 'bg-blue-50'
