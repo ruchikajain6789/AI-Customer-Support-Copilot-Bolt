@@ -95,6 +95,7 @@ export default function Dashboard({ conversations, onOpenConversation, onNavigat
           <span className="text-xs text-gray-400 ml-1">Live AI Analysis</span>
         </div>
         <p className="text-sm text-gray-500 mb-3">Enter a customer's support question to get an AI-powered recommendation.</p>
+        
         <div className="flex flex-wrap gap-2 mb-4">
   {[
     "My order 101 hasn't arrived. Can you check the status?",
