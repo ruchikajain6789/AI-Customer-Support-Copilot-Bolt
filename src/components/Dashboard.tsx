@@ -94,7 +94,7 @@ export default function Dashboard({ conversations, onOpenConversation, onNavigat
           <h2 className="text-sm font-semibold text-gray-900">New Customer Message</h2>
           <span className="text-xs text-gray-400 ml-1">Live AI Analysis</span>
         </div>
-        <p className="text-sm text-gray-500 mb-3">Enter a customer's support question to get an AI-powered recommendation.</p>
+        <p className="text-sm text-gray-500 mb-3"> Enter a customer's support question to get an AI-powered recommendation.</p>
         
         <div className="flex flex-wrap gap-2 mb-4">
   {[
