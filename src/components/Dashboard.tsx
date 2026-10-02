@@ -24,9 +24,7 @@ export default function Dashboard({ conversations, onOpenConversation, onNavigat
   {
     label: 'Conversations Today',
     value: conversations
-  .filter(c => new Date(c.createdAt).toDateString() === new Date().toDateString())
-  .length
-  .toString(),
+  value: conversations.length.toString(),
     icon: MessageSquare,
     accent: 'text-blue-600',
     bg: 'bg-blue-50'
