@@ -10,11 +10,35 @@ interface DashboardProps {
   isAnalyzing: boolean;
 }
 
-const kpis: { label: string; value: string; icon: LucideIcon; accent: string; bg: string }[] = [
-  { label: 'Conversations Today', value: '124', icon: MessageSquare, accent: 'text-blue-600', bg: 'bg-blue-50' },
-  { label: 'AI Assisted', value: '37', icon: Sparkles, accent: 'text-indigo-600', bg: 'bg-indigo-50' },
-  { label: 'Awaiting Action', value: '18', icon: Clock, accent: 'text-amber-600', bg: 'bg-amber-50' },
-  { label: 'Escalations', value: '7', icon: AlertTriangle, accent: 'text-rose-600', bg: 'bg-rose-50' },
+const kpis = [
+  {
+    label: 'Conversations Today',
+    value: conversations.length.toString(),
+    icon: MessageSquare,
+    accent: 'text-blue-600',
+    bg: 'bg-blue-50'
+  },
+  {
+    label: 'AI Assisted',
+    value: conversations.filter(c => c.confidence > 0).length.toString(),
+    icon: Sparkles,
+    accent: 'text-indigo-600',
+    bg: 'bg-indigo-50'
+  },
+  {
+    label: 'Awaiting Action',
+    value: conversations.filter(c => c.status === 'Pending').length.toString(),
+    icon: Clock,
+    accent: 'text-amber-600',
+    bg: 'bg-amber-50'
+  },
+  {
+    label: 'Escalations',
+    value: conversations.filter(c => c.status === 'Escalated').length.toString(),
+    icon: AlertTriangle,
+    accent: 'text-rose-600',
+    bg: 'bg-rose-50'
+  },
 ];
 
 const statusStyles: Record<string, string> = {
