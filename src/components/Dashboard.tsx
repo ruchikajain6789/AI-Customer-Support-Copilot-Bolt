@@ -38,6 +38,10 @@ export default function Dashboard({ conversations, onOpenConversation, onNavigat
       <div className="mb-8">
         <h1 className="text-2xl font-bold text-gray-900">AI Customer Support Copilot</h1>
         <p className="text-gray-500 mt-1">Resolve customer issues faster with AI-powered assistance.</p>
+        <div className="mt-3 inline-flex items-center rounded-lg bg-gray-50 border border-gray-200 px-3 py-2 text-xs text-gray-500">
+  <span className="font-medium text-gray-700 mr-1">Demo Environment:</span>
+  Customer and order data shown here is synthetic and created for demonstration purposes.
+</div>
       </div>
 
       <div className="grid grid-cols-4 gap-4 mb-8">
