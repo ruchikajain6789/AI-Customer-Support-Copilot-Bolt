@@ -95,6 +95,23 @@ export default function Dashboard({ conversations, onOpenConversation, onNavigat
           <span className="text-xs text-gray-400 ml-1">Live AI Analysis</span>
         </div>
         <p className="text-sm text-gray-500 mb-3">Enter a customer's support question to get an AI-powered recommendation.</p>
+        <div className="flex flex-wrap gap-2 mb-4">
+  {[
+    "My order 101 hasn't arrived. Can you check the status?",
+    "My order 104 is delayed. What can I do?",
+    "My product arrived damaged and I want a refund.",
+    "I received the wrong size. Can I exchange it?",
+  ].map((example) => (
+    <button
+      key={example}
+      onClick={() => setMessage(example)}
+      disabled={isAnalyzing}
+      className="text-xs px-3 py-2 rounded-lg border border-gray-200 bg-gray-50 text-gray-600 hover:bg-gray-100 hover:text-gray-900 transition-colors disabled:opacity-50"
+    >
+      {example}
+    </button>
+  ))}
+</div>
         <div className="flex gap-2">
           <input
             type="text"
