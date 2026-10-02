@@ -25,6 +25,7 @@ export interface Conversation {
   customer: string;
   subject: string;
   status: ConversationStatus;
+  createdAt: string;
   issueType: string;
   intent: string;
   confidence: number;
